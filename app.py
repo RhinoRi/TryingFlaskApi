@@ -24,7 +24,7 @@ def home():
     return "~Savvy Vegan~"
 
 
-api.add_resource(Facts, "/fact/<string:name>")
+api.add_resource(Facts, "/fact")
 api.add_resource(FactsList, "/facts")
 
 

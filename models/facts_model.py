@@ -7,7 +7,7 @@ class FactsModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False, primary_key=True)
-    desc = db.Column(db.String(250), unique=True, nullable=False, )
+    desc = db.Column(db.String(250))
     image = db.Column(db.String(100))
     source = db.Column(db.String(100))
 
@@ -31,8 +31,8 @@ class FactsModel(db.Model):
         return cls.query.all()
 
     @classmethod
-    def find_by_name(cls, name):
-        return cls.query.filter_by(name=name).first()
+    def find_by_id(cls, _id):
+        return cls.query.filter_by(id=_id).first()
 
     def save_to_db(self):
         db.session.add(self)
