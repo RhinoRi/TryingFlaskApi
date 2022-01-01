@@ -58,6 +58,6 @@ class Facts(Resource):
 
 # displaying all the facts..
 class FactsList(Resource):
-        def get(self):
-            facts = [fact.json() for fact in FactsModel.find_all()]
-            return {"facts": facts}, 200
+    def get(self):
+        facts = [fact.json() for fact in FactsModel.find_all()]
+        return {"facts": facts}, 200
