@@ -1,3 +1,2 @@
 # VeganFactsApi
-This is an API displaying facts about vegan food in JSON format.
-This includes title, image and description.
+This is a trial and error repo of me practising flask-restful api and also learning handling git and github.
